@@ -1,48 +1,59 @@
-.Login {
+/* Centering and overall layout */
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(to right, #007bff, #0056b3);
   padding: 20px;
 }
 
-.Login h2 {
-  margin-bottom: 25px;
-  color: #333;
-  font-size: 2rem;
-  text-align: center;
-}
-
-.Login form {
-  display: flex;
-  flex-direction: column;
+/* Login box */
+.login-box {
   width: 100%;
   max-width: 400px;
   background-color: white;
   padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
 }
 
-.Login input {
-  padding: 12px;
+/* Heading */
+.login-box h2 {
   margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+/* Form Styling */
+.login-box form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input fields */
+.login-box input {
+  padding: 12px;
+  margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-.Login input:focus {
+/* Input focus effect */
+.login-box input:focus {
   outline: none;
   border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
-.Login button {
-  padding: 12px 20px;
+/* Button styling */
+.login-box button {
+  padding: 12px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -52,28 +63,49 @@
   transition: background-color 0.3s ease;
 }
 
-.Login button:hover {
+.login-box button:hover {
   background-color: #0056b3;
 }
 
-.Login p {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.Login a {
-  color: #007bff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.Login a:hover {
-  text-decoration: underline;
-  color: #0056b3;
-}
-
+/* Error message */
 .error {
   color: red;
   margin-top: 10px;
   text-align: center;
+}
+
+/* Sign up link */
+.login-box p {
+  margin-top: 15px;
+}
+
+.login-box a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .login-box input {
+    padding: 10px;
+  }
+
+  .login-box button {
+    padding: 10px;
+  }
 }
