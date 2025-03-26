@@ -1,0 +1,64 @@
+.dashboard-container {
+    display: flex;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    height: 28px;
+    background-image: url('/public/logo512.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.user-menu {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu p {
+    margin: 0;
+    padding: 5px 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.dropdown-menu button {
+    background: none;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #007bff;
+    text-align: left;
+}
+
+.dropdown-menu .delete {
+    color: red;
+}
